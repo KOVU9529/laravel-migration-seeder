@@ -12,9 +12,7 @@ class CreateTravelsTable extends Migration
      * @return void
      */
     public function up()
-    {
-       
-            
+    { 
         Schema::create('travels', function (Blueprint $table) {
             $table->id();
             $table->string('reference', 12);
@@ -23,7 +21,6 @@ class CreateTravelsTable extends Migration
             $table->string('type', 50);
             $table->text('description')->nullable();
             $table->decimal('price', 7,2);
-            // $table->type= $travelHouseType[rand(0,2)];
             $table->timestamps();
         });
     }
